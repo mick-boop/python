@@ -17,7 +17,7 @@ while active:
         try:
             int(guess)
         except:
-            guess = input("That is not an integer! Try again: ")
+            guess = input(str(guess) + " is not an integer! Try again: ")
             continue
 
     if guess == 'quit':
