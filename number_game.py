@@ -13,10 +13,12 @@ guess = input(prompt)
 active = True
 
 while active:
-    if type(guess) == str and guess != 'quit':
-        guess = input(str(guess) + " is not an integer! Try again: ")
-        continue
-
+     if guess != 'quit':
+        try:
+            int(guess)
+        except:
+            guess = input("That is not a number! Try again: ")
+            continue
     if guess == 'quit':
         print("\nThanks for playing!")
         active = False
